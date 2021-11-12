@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>trabalhe conosco</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+<body>
+     
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+            <form action="curriculo.php" method="post">
+                <h2 class="title title-primary">Bem Vindo a Sticle</h2>
+                <p class="description description-primary">Para trabalhar com a gente</p>
+                <p class="description description-primary">por favor prencha as suas informações pessoais</p>
+                <button class="btn btn-primary" type="submit">Sou Candidato</button>
+            </form>
+            </div>    
+           
+            <div class="second-column"><!-- second column -->
+                <h2 class="title title-second">Sticle  Malharia </h2>
+              
+                <p class="description description-second">Digite o Login e senha</p>
+                <div class="form"action="consulta.php" method="post">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="usuario" name="usuario">
+                    </label>
+                    
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="senha" name="senha">
+                    </label>
+               
+                    <button class="btn btn-second"onclick="Login()" value="Login">entrar</button> 
+                    
+       
+                  </div>
+                <script>
+                    function Login() {
+  let done=0;
+  let usuario = document.getElementsByName('usuario')[0].value;
+  usuario=usuario.toLowerCase();
+  var senha= document.getElementsByName('senha')[0].value;
+  seha=senha.toLowerCase();
+  if (usuario=="admin" && senha=="sticlerh" ||usuario=="admin" && senha=="admin" ) {
+    window.location="consulta.php";
+    done=1;
+  }
+  if (done==0) { alert("Dados incorretos, tente novamente"); }
+}
+                </script>
+            </div><!-- second column -->
+       
+    </div>
+  
+</body>
+</html>
